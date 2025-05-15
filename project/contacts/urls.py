@@ -3,5 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    path('contacts/',views.ContactstUserView.as_view(),name='cantact-list'),
+    path('contacts/',views.ContactstUserView.as_view(),name='contact-list'),
 ]

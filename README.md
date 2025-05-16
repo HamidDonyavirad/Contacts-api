@@ -13,10 +13,21 @@ This API supports full CRUD (Create, Read, Update, Delete) operations for managi
 - Partially update a contact (PATCH `/contacts/{id}/`)
 - Delete a contact (DELETE `/contacts/{id}/`)
 
+### 🔎 Additional Features
+
+- **Search** contacts by fullName or numberPhone  
+  Example: `GET /contacts/?search=John`
+
+- **Ordering** results by fullName  (ascending or descending)  
+  Example: `GET /contacts/?ordering=fullName` 
+
+- **Filtering** by specific fields (e.g., exact name or phone)  
+  Example: `GET /contacts/?fullname=Alice` or `GET /contacts/?numberPhone=1234567890`
+
 Each contact includes:
 - `id` – Unique identifier
-- `name` – Full name
-- `phone` – Phone number
+- `fullName` – Full name
+- `numberPhone` – Phone number
 
 ## 🛠️ Technologies Used
 
@@ -24,3 +35,5 @@ Each contact includes:
 - Django 🌐
 - Django REST Framework 🔧
 - SQLite (default development database)
+
+
